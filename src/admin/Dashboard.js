@@ -20,7 +20,7 @@ const Dashboard = () => {
             <div className="col-span-1 bg-green-300">
                 <SideMenu setControl={setControl} control={control} />
             </div>
-            <div className="col-span-5 pt-24 bg-pink-300">
+            <div className="col-span-5 pt-24 bg-blue-200">
             {control === "manageBooking" && <ManageBookingsScreen/>}
             {control === "addTour" && <AddNewTourPackage /> }
                 {control === "makeadmin" && <MakeAdmin/>}

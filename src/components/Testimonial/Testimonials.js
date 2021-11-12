@@ -9,8 +9,9 @@ const Testimonials = () => {
     const [testimonialData, setTestimonialData] = useState([]);
 
     useEffect(() => {
-        // axios.get('https://sm-travel-solo.herokuapp.com/testimonials')
-        axios.get('http://localhost:5000/testimonials')
+    
+        // axios.get('http://localhost:5000/testimonials')
+        axios.get('https://powerful-taiga-35420.herokuapp.com/testimonials')
             .then(res => setTestimonialData(res.data))
     }, [])
 

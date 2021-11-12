@@ -20,8 +20,9 @@ const MyBookingScreen = () => {
 
 
     useEffect(() => {
-        // fetch('https://sm-travel-solo.herokuapp.com/bookings')
-        fetch('http://localhost:5000/bookings')
+        
+        // fetch('http://localhost:5000/bookings')
+        fetch('https://powerful-taiga-35420.herokuapp.com/bookings')
             .then(res => res.json())
             .then(data => setMyBookings(data.filter(item => item.data.email === user.email)))
     }, [user.email])
@@ -45,8 +46,8 @@ const MyBookingScreen = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    // axios.delete(`https://sm-travel-solo.herokuapp.com/bookings/${id}`)
-                    axios.delete(`http://localhost:5000/bookings/${id}`)
+                    // axios.delete(`http://localhost:5000/bookings/${id}`)
+                    axios.delete(`https://powerful-taiga-35420.herokuapp.com/bookings/${id}`)
                         .then(res => {
                             if (res.data.deletedCount > 0) {
                                 swal("Poof! Booking has deleted", {

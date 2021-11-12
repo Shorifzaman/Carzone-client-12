@@ -15,7 +15,7 @@ const ManageBookingsScreen = () => {
     const history = useHistory();
     useEffect(() => {
         // fetch('https://sm-travel-solo.herokuapp.com/bookings')
-        fetch('http://localhost:5000/bookings')
+        fetch('https://powerful-taiga-35420.herokuapp.com/bookings')
             .then(res => res.json())
             .then(data => setallBookings(data))
     }, []);
@@ -45,8 +45,7 @@ const ManageBookingsScreen = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    // axios.delete(`https://sm-travel-solo.herokuapp.com/bookings/${id}`)
-                    axios.delete(`http://localhost:5000/bookings/${id}`)
+                    axios.delete(`https://powerful-taiga-35420.herokuapp.com/bookings/${id}`)
                         .then(res => {
                             if (res.data.deletedCount > 0) {
                                 swal("Poof! Booking has deleted", {
@@ -69,8 +68,8 @@ const ManageBookingsScreen = () => {
         const prevBooking = { ...singleBooking };
         const prevData = prevBooking.data;
         prevData.status = "Approved"
-        // axios.put(`https://sm-travel-solo.herokuapp.com/bookings/${id}`, {
-        axios.put(`http://localhost:5000/bookings/${id}`, {
+        // axios.put(`http://localhost:5000/bookings/${id}`, {
+        axios.put(`https://powerful-taiga-35420.herokuapp.com/bookings/${id}`, {
             newData: prevData
         }).then(res => {
             if (res.data.modifiedCount > 0) {

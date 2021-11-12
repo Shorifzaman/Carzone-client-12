@@ -6,8 +6,9 @@ import swal from 'sweetalert';
 const ReviewForm = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        // axios.post('https://sm-travel-solo.herokuapp.com/tours', data)
-        axios.post('http://localhost:5000/addSReview', data)
+       
+        // axios.post('http://localhost:5000/addSReview', data)
+        axios.post('https://powerful-taiga-35420.herokuapp.com/addSReview', data)
             .then((response) => {
                 if (response.statusText === "OK") {
                     swal("Good job!", "THANKS FOR FEEDBACK", "success")

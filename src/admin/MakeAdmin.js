@@ -10,7 +10,8 @@ const MakeAdmin = () => {
   const { register, handleSubmit, watch, reset, errors } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/makeAdmin", {
+    // fetch("http://localhost:5000/makeAdmin", {
+    fetch("https://powerful-taiga-35420.herokuapp.com/makeAdmin", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -19,7 +20,7 @@ const MakeAdmin = () => {
       // .then((result) => console.log(result));
       .then(data => {
           if (data.insertedId) {
-              console.log(data);        
+              console.log(data,"helloo");        
               swal("Admin added Successfully!!");
           }
           swal("please user register first!!");
@@ -28,20 +29,29 @@ const MakeAdmin = () => {
     console.log(data);
   };
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/users/${user?.email}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data[0]?.role === "admin") {
-          setIsAdmin(true);
-          // swal("Admin added Successfully!!");
-        } else {
-          // swal("please user register first!!");
-          setIsAdmin(false);
-        }
-      });
-  }, [user?.email]);
-  console.log(isAdmi);
+//   useEffect(() => {
+//     fetch(`https://powerful-taiga-35420.herokuapp.com/users/${user.email}`)
+  //  // fetch(`http://localhost:5000/users/${user.email}`)
+//     // fetch(`https://stark-caverns-04377.herokuapp.com/users/${user.email}`)
+//         .then(res => res.json())
+//         .then(data => setIsAdmin(data.admin))
+// }, [user.email])
+
+
+  // useEffect(() => {
+  //   fetch(`http://localhost:5000/users/${user?.email}`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if (data[0]?.role === "admin") {
+  //         setIsAdmin(true);
+  //         // swal("Admin added Successfully!!");
+  //       } else {
+  //         // swal("please user register first!!");
+  //         setIsAdmin(false);
+  //       }
+  //     });
+  // }, [user?.email]);
+  // console.log(isAdmi);
 
 
 

@@ -4,14 +4,12 @@ import Fade from 'react-reveal/Fade';
 
 const ExploreCar = () => {
 
-
-
-
     const [toursPack, setToursPack] = useState([]);
 
     useEffect(() => {
         // fetch('https://sm-travel-solo.herokuapp.com/tours')
-        fetch('http://localhost:5000/tours')
+        // fetch('http://localhost:5000/tours')
+        fetch('https://powerful-taiga-35420.herokuapp.com/tours')
             .then(res => res.json())
             .then(data => setToursPack(data))
             

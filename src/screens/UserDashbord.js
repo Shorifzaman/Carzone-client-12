@@ -11,7 +11,7 @@ const UserDashbord = () => {
             <div className="col-span-1 bg-gray-200">
                 <SideMenu setControl={setControl} control={control} />
             </div>
-            <div className="col-span-5 pt-5 bg-pink-200">
+            <div className="col-span-5 pt-5 bg-blue-200">
                 {control === "my-bookings" && <MyBookingScreen /> }
                 {control === "review" && <AddReview/>}
             </div>

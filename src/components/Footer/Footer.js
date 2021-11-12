@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <Fade left>
             <footer class="px-4 pt-5 pb-5 text-white border-t border-gray-200 mb-15 h-100">
-        <div class="bg-blue-200 container flex flex-col justify-between max-w-6xl px-4 mx-auto overflow-hidden lg:flex-row">
+        <div class="bg-blue-200 max-w-screen-2xl flex flex-col justify-between  px-4 overflow-hidden lg:flex-row">
             <div class="w-full pl-12 mr-4 text-left lg:w-1/4 sm:text-center sm:pl-0 lg:text-left">
                 <p class="mt-6 mr-4 text-base text-gray-500">Car Zone
                 </p>
@@ -128,8 +128,8 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-            </footer>
-        </Fade>
+      </footer>
+      </Fade>
     )
 }
 

@@ -1,18 +1,23 @@
 # car zone online orders Web App by react & node.js
 
 
-It is a single page application with admin Dashbaord made with ReactJS
+It is a single page application with admin Dashbaord made with ReactJS.
+You will receive a fair price directly from us, online. If you accept our offer, we will just check if the vehicle condition matches its description and the ...
 
 ## Live Demo of this website :
 
 - [Live Site Link](https://carzone-benz.web.app/)
+- [server Link](https://github.com/programming-hero-web-course-4/niche-website-server-side-Shorifzaman/)
+
 
 
 ##  this website details :
 
-- Online orders
+- Business description	Export and sale of automobiles
+- Reliability
 - express service
-- quality car
+- quality 
+Customer Satisfaction
 - Online Payment
 - worl wide order now 
 

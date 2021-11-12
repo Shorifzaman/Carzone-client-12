@@ -13,9 +13,9 @@ const Navbar = ({ bg, textColor, width}) => {
 
     const menu = [
         { id: 1, text: 'My Bookings', to: '/my-bookings' },
-        { id: 1, text: 'Car', to: '/explore' },
-        { id: 1, text: 'Contact', to: '/contact' },
-        { id: 2, text: 'Dashboard', to: '/dashboard' }
+        { id: 2, text: 'Car', to: '/explore' },
+        { id: 3, text: 'Contact', to: '/contact' },
+        { id: 4, text: 'Dashboard', to: '/dashboard' }
     ]
 
     //handle click 
@@ -40,7 +40,7 @@ const Navbar = ({ bg, textColor, width}) => {
     window.addEventListener('scroll',handleChangeHeader)
 
     return (
-        <header className={`${changeHeader ? "bg-pink-100" : `${bg}`} w-full  fixed top-0 left-0  z-50 transition duration-200`}>
+        <header className={`${changeHeader ? "bg-blue-200" : `${bg}`} w-full  fixed top-0 left-0  z-50 transition duration-200`}>
             {/* desktop nav  */}
             <nav className={`flex items-center px-12 py-3 font-primary ${width} mx-auto`}>
                 {/* brand  */}

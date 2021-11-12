@@ -91,12 +91,20 @@ const useFirebase = () => {
         return () => unsubscribed;
     }, [auth])
 
+
+    // check user database for
+
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        // fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://powerful-taiga-35420.herokuapp.com/users/${user.email}`)
         // fetch(`https://stark-caverns-04377.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
+
+
+
+
 
     const logout = () => {
         setIsLoading(true);
@@ -111,8 +119,8 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
-        // fetch('https://stark-caverns-04377.herokuapp.com/users', {
+        // fetch('http://localhost:5000/users', {
+        fetch('https://powerful-taiga-35420.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -125,7 +133,8 @@ const useFirebase = () => {
 
     const hanldeUserInfoRegister = (email) => {
         // fetch("http://localhost:5000/addUserInfo", {
-        fetch("http://localhost:5000/users", {
+        // fetch("http://localhost:5000/users", {
+        fetch("https://powerful-taiga-35420.herokuapp.com/users", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ email }),
