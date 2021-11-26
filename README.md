@@ -16,10 +16,12 @@ You will receive a fair price directly from us, online. If you accept our offer,
 - Business description	Export and sale of automobiles
 - Reliability
 - express service
-- quality 
-Customer Satisfaction
+- user login 
+- Admin Dashboard
+- Dynamice update and delete 
+- Customer Satisfaction
 - Online Payment
-- worl wide order now 
+- worl wide order now coming soon
 
 ## Technologies
 
